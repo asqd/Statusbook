@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 
 gem 'devise', '~> 3.2.4'
+gem 'simple_form', '3.0.2'
+gem 'faker', '1.1.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
