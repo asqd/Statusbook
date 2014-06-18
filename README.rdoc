@@ -7,3 +7,9 @@ Another small social network. Build with Rails 4 and used
 * Simple form makes our forms better
 
 * Bootstrap for nice design
+
+
+To prepare database use follow commands:
+
+<b>rake db:migrate</b> for migrations
+<b>rake db:populate</b> fill database with sample data
