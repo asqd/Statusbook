@@ -11,8 +11,10 @@ Another small social network. Build with Rails 4 and used
 
 To prepare database use follow commands:
 
-For migrations
- rake db:migrate
+For migrations 
 
-Fill database with sample data
- rake db:populate
+``` rake db:migrate ```
+
+Fill database with sample data 
+
+``` rake db:populate ```
