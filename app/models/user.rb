@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
   
   validates :profile_name, presence: true, 
                           uniqueness: true,
-                          format: { with: /a-zA-z0-9_-/, 
-                          message: "Please use only letters, '-' or '_'"}
+                          format: { with: /[a-zA-Z][a-zA-Z0-9_-]/, 
+                          message: "must contains use only letters, '-' or '_'"}
 
   def full_name
   	"#{first_name} #{last_name}"  	

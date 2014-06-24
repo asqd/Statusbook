@@ -8,14 +8,14 @@ namespace :db do
   def make_users
     admin = User.create!(first_name: "Hidetaka",
                          last_name: "Miyazaki",
-                         profile_name: "Souls",
+                         profile_name: "souls",
                          email: "dsouls@fs.com",
                          password: "foobar",
                          password_confirmation: "foobar")
 
     admin = User.create!(first_name: "Joss",
                          last_name: "Whedon",
-                         profile_name: "Firefly",
+                         profile_name: "firefly",
                          email: "jwhedon@disney.com",
                          password: "avengers",
                          password_confirmation: "avengers")
