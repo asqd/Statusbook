@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   
   validates :profile_name, presence: true, 
                           uniqueness: true,
-                          format: { with: /\A[a-zA-Z][a-zA-Z0-9_-]\z/, 
+                          format: { with: /\A[a-zA-Z][a-zA-Z0-9_-]+\z/, 
                           message: "must contains use only letters, '-' or '_'."}
 
   def full_name
