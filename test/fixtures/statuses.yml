@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  content: MyText
+  content: Like a Rolling Stone
   user: bobdylan
 
 two:
-  content: MyText
+  content: Blowing in the Wind
   user: bobdylan
+
+three:
+  content: Space Truckin'
+  user: rblackmore
