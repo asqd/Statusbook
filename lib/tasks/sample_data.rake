@@ -6,14 +6,14 @@ namespace :db do
   end
 
   def make_users
-    admin = User.create!(first_name: "Hidetaka",
+    user1 = User.create!(first_name: "Hidetaka",
                          last_name: "Miyazaki",
                          profile_name: "souls",
                          email: "dsouls@fs.com",
                          password: "foobar",
                          password_confirmation: "foobar")
 
-    admin = User.create!(first_name: "Joss",
+    user2 = User.create!(first_name: "Joss",
                          last_name: "Whedon",
                          profile_name: "firefly",
                          email: "jwhedon@disney.com",
