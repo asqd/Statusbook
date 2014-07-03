@@ -6,4 +6,6 @@ class Status < ActiveRecord::Base
   					  length: { minimum: 3 }
 
   validates :user_id, presence: true
+
+  
 end

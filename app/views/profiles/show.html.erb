@@ -3,11 +3,15 @@
 </div>
 
 <% if @statuses %>
-<% @statuses.each do |status| %>
-<div class="well">
-	<%= status.content  %>
-	<hr />
-	<%= link_to time_ago_in_words(status.created_at), status_path(status) %> ago
+<div class="statuses">
+  <%= render @statuses %>
 </div>
 <% end %>
+
+<% if @statuses.next_page %>
+    <div id="load_more_statuses" class="btn btn-primary btn-lg">More statuses</div>
 <% end %>
+
+<div id="with-button">
+    <%= will_paginate @statuses%>
+</div>

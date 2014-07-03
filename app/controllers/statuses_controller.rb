@@ -6,7 +6,8 @@ class StatusesController < ApplicationController
   # GET /statuses
   # GET /statuses.json
   def index
-    @statuses = Status.all
+    get_and_show_statuses
+    #@statuses = Status.all
   end
 
   # GET /statuses/1
@@ -64,14 +65,21 @@ class StatusesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_status
-      @status = Status.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_status
+    @status = Status.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def status_params
-      params.require(:status).permit(:content, :user_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def status_params
+    params.require(:status).permit(:content, :user_id)
+  end
 
+  def get_and_show_statuses
+    @statuses = Status.paginate(page: params[:page], per_page: 15).order('created_at DESC')
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 end
