@@ -70,6 +70,11 @@ class StatusesController < ApplicationController
     @status = Status.find(params[:id])
   end
 
+  def correct_user?
+    status = current_user.statuses.find_by(id: params[:id])
+    redirect_to root_path if status.nil?
+  end
+
   # Never trust parameters from the scary internet, only allow the white list through.
   def status_params
     params.require(:status).permit(:content, :user_id)
