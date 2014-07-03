@@ -23,7 +23,7 @@ namespace :db do
 
   def make_statuses
     users = User.all
-    10.times do
+    50.times do
       content = Faker::Lorem.sentence(5)
       users.each { |user| user.statuses.create(content: content)  }
     end
