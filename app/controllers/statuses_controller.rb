@@ -71,13 +71,8 @@ class StatusesController < ApplicationController
   end
 
   def correct_user?
-<<<<<<< HEAD
     status = current_user.statuses.find_by(id: params[:id])
     redirect_to root_path if status.nil?
-=======
-    @user = @status.user
-    @user == current_user    
->>>>>>> 2b7b9085b38d011a6dab0fe259aa58b993ff41c8
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
