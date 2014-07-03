@@ -8,6 +8,7 @@ Another small social network. Build with Rails 4 and used
 
 - Bootstrap for nice design
 
+before starts run ``` bundle install ```
 
 To prepare database use follow commands:
 
@@ -18,3 +19,5 @@ For migrations
 Fill database with sample data 
 
 ``` rake db:populate ```
+
+Live demo http://status-book.herokuapp.com
