@@ -25,7 +25,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert !user.save
     assert !user.errors[:profile_name].empty?
-    assert user.errors[:profile_name].include?("must contains use only letters, '-' or '_'.")
+    assert user.errors[:profile_name].include?("must contains only letters, '-' or '_'.")
   end
 
   test "user's profile name can't start with a number" do
@@ -34,7 +34,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert !user.save
     assert !user.errors[:profile_name].empty?
-    assert user.errors[:profile_name].include?("must contains use only letters, '-' or '_'.")
+    assert user.errors[:profile_name].include?("must contains only letters, '-' or '_'.")
   end
 
   test "a user can have correctly profile name" do

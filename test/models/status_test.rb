@@ -8,7 +8,7 @@ class StatusTest < ActiveSupport::TestCase
   	assert !status.errors[:content].empty?
   end
 
-  test "that a status's content has at lesast 3 letters" do
+  test "that a status's content has at least 3 letters" do
   	status = Status.new
   	status.content = "Hi"
 

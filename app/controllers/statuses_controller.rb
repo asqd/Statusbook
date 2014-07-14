@@ -13,6 +13,10 @@ class StatusesController < ApplicationController
   # GET /statuses/1
   # GET /statuses/1.json
   def show
+     respond_to do |format|
+      format.html
+      format.json { render json: @status }
+    end
   end
 
   # GET /statuses/new
@@ -85,6 +89,7 @@ class StatusesController < ApplicationController
     respond_to do |format|
       format.html
       format.js
+      format.json { render json: @statuses.as_json }
     end
   end
 end
